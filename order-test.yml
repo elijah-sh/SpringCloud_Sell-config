@@ -20,5 +20,5 @@ spring:
     show-sql: true
 
 girl:
-  age: 21
+  age: 22
   name: Fangfang.Lee
