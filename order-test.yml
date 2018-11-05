@@ -20,5 +20,5 @@ spring:
     show-sql: true
 
 girl:
-  age: 19
+  age: 20
   name: Cui.Flower
