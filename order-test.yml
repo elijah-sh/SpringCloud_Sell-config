@@ -20,5 +20,5 @@ spring:
     show-sql: true
 
 girl:
-  age: 22
-  name: Fangfang.Lee
+  age: 18
+  name: Cui.Flower
