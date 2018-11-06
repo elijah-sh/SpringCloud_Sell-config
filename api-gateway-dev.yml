@@ -1,0 +1,22 @@
+server:
+  port: 9001
+  
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG   # 得启动配置中心这个项目才可以
+      profile: dev   # 读取开发环境文件
+  application:
+    name: api-gateway          # 显示的Application名字
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/     #,http://${eureka.instance.hostname}:8762/eureka/       # 注册的地址
+    register-with-eureka: false      # 不需要注册自己
+  server:
+    enable-self-preservation: false    #  关闭注册中心的保护机制,
+  instance:
+    hostname: localhost  
