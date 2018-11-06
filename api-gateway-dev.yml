@@ -6,11 +6,8 @@ spring:
     name: api-gateway          # 显示的Application名字
 
 eureka:
+  instance:
+    hostname: 127.0.0.1
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/     #,http://${eureka.instance.hostname}:8762/eureka/       # 注册的地址
-    register-with-eureka: false      # 不需要注册自己
-  server:
-    enable-self-preservation: false    #  关闭注册中心的保护机制,
-  instance:
-    hostname: localhost  
+      defaultZone: http://127.0.0.1:8761/eureka
