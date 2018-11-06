@@ -2,12 +2,6 @@ server:
   port: 9001
   
 spring:
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG   # 得启动配置中心这个项目才可以
-      profile: dev   # 读取开发环境文件
   application:
     name: api-gateway          # 显示的Application名字
 
