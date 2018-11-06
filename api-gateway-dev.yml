@@ -23,3 +23,17 @@ rabbitmq:
       max-concurrency: 10     # 最大 10 个通道
       acknowledge-mode: manual       # 默认情况下消息消费者是自动 ack （确认）消息的，如果要手动 ack（确认）则需要修改确认模式为 manual
       prefetch: 1   #  需要并行1
+      
+zuul:
+  routes:
+    product:   # 自定义
+      path: /myProduct/**   # 映射路径
+      serviceId: product   # 服务名称
+      sensitiveHeaders:    #  敏感头 可以传输 "Cookie", "Set-Cookie", "Authorization" 信息 设置为空
+  # 简洁写法
+   # product: /myProduct/**
+  #  排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
+#    - /myProduct/product/list
+#    - /product/product/list
