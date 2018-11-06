@@ -11,3 +11,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
+      
+rabbitmq:
+  host: 192.168.99.100
+  port: 5672                        # 是客户端的地址，不是浏览器管理端的                 #
+  username: guest
+  password: guest
+  listener:
+    simple:
+      concurrency: 5         # 五个通道
+      max-concurrency: 10     # 最大 10 个通道
+      acknowledge-mode: manual       # 默认情况下消息消费者是自动 ack （确认）消息的，如果要手动 ack（确认）则需要修改确认模式为 manual
+      prefetch: 1   #  需要并行1
