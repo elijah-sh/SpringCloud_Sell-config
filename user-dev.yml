@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: api-gateway          # 显示的Application名字
+    name: user          # 显示的Application名字
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
