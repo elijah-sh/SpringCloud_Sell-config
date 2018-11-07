@@ -2,8 +2,6 @@ server:
   port: 6001
   
 spring:
-  application:
-    name: user          # 显示的Application名字
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
