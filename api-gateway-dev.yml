@@ -25,6 +25,8 @@ rabbitmq:
       prefetch: 1   #  需要并行1
       
 zuul:
+  # 全部服务忽略敏感头（全部服务可以传递cookie）
+  sensitive-headers:
   routes:
     product:   # 自定义
       path: /myProduct/**   # 映射路径
