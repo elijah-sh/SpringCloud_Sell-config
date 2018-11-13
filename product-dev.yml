@@ -6,11 +6,18 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/springcloud_sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://212.64.11.85:3306/springcloud_sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  rabbitmq:
+    host: 212.64.11.85
+    port: 5672                        # 是客户端的地址，不是浏览器管理端的                 #
+    username: guest
+    password: guest
+    listener:
+      simple:
+        concurrency: 5         # 五个通道
+        max-concurrency: 10     # 最大 10 个通道
+        acknowledge-mode: manual       # 默认情况下消息消费者是自动 ack （确认）消息的，如果要手动 ack（确认）则需要修改确认模式为 manual
+        prefetch: 1   #  需要并行1
+        
