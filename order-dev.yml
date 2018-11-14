@@ -1,12 +1,6 @@
 server:
   port: 8001
 
-eureka:
-  instance:
-    hostname: 127.0.0.1
-  client:
-    service-url:
-      defaultZone: http://112.74.89.58:42569/eureka
 
 env: dev
 
